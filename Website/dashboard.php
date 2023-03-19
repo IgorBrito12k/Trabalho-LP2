@@ -30,7 +30,7 @@
                         if ($_SESSION['tipoUsuario'] == 1) {
                             echo " <a href='medico/listarmedicos.php'>Medico</a>";
                             echo " <a href='plano/listarplano.php'>Plano</a>";
-                            echo " <a href='especialidade/listarespecialidade.php'>Especialidade</a>";
+                            echo " <a href='./especialidade/listarespecialidades.php'>Especialidade</a>";
                         }
                         
                         if ($_SESSION['tipoUsuario'] == 2) {

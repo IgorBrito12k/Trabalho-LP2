@@ -5,10 +5,8 @@ if ($_SESSION['tipoUsuario'] == 1) {
 <div class="content">
 <h3 id="titulo">Cadastro de Especialidade</h3>
 <fieldset class="form">
-    <form name="form1" action="inserirespecialidade.php"
+    <form name="form1" action="inserirespecialidades.php"
     method="post">
-    <label for="id">id</label>
-    <input type="text" name="id"><br>
     <label for="nome">Nome</label>
     <input type="text" name="nome" required><br>
     </fieldset>
