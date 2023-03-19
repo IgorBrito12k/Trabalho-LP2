@@ -13,21 +13,26 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
     $resultado = $conexao->query($sql);
     $dados = $resultado->fetchAll(PDO::FETCH_ASSOC);
 
-    foreach ($dados as $linha) {
-        //se existir, define as variáveis de sessão e redireciona para a dashboard
-        $_SESSION['usuarioLogado'] = true;
-        $_SESSION['idUsuario'] = $linha['id'];
-        $_SESSION['nomeUsuario'] = $linha['nome'];
-        $_SESSION['tipoUsuario'] = $linha['tipo'];
-        header("location:dashboard.php");
-        // é importante sair do script após redirecionar
-        exit;
+     foreach ($dados as $linha) {
+         //se existir, define as variáveis de sessão e redireciona para a dashboard
+         $_SESSION['usuarioLogado'] = true;
+         $_SESSION['idUsuario'] = $linha['id'];
+         $_SESSION['nomeUsuario'] = $linha['nome'];
+         $_SESSION['tipoUsuario'] = $linha['tipo'];
+
+         // se encontrou o registro, não exibe mensagem de erro
+         $encontrouRegistro = true;
+
+        echo "<h1>Login validado</h1><br>";
+        echo "<p>Siga para a sua dashboard clicando em no
+        'Inicio' na barra superior ou abaixo:</p><br>";
+        echo "<a href='dashboard.php'>Dashboard</a>";
     }
 
-    // se não existir, exibe mensagem de erro
-    echo "E-mail ou senha inválidos.";
-
+     if (!$encontrouRegistro) {
+        // se não existir, exibe mensagem de erro
+        echo "E-mail ou senha inválidos.";
+    }
 }
 require_once("rodape.php");
-
 ?>

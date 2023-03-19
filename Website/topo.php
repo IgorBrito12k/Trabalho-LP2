@@ -34,6 +34,5 @@ if (session_status() == PHP_SESSION_NONE) {
             }
             ?>
         </ul>
-        <br><br>
     </body>
 </html>
