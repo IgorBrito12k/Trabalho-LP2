@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  apache:
+    build: .
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./Website:/var/www/html
+
+  mariadb:
+    image: mariadb:10.4
+    restart: always
+    env_file: .env
+    
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8180:80
+    env_file: .env
+    environment:
+      PMA_HOST: mariadb
+      PMA_PASSWORD: senha
