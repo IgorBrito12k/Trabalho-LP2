@@ -6,15 +6,15 @@
          executar esta página</p>";
     } else {
         if ($_SESSION['tipoUsuario'] == 1) {
-            if(isset($_POST['id']) && isset($_POST['nome'])){
-                $var_id = $_POST['id'];
-                $var_nome = $_POST['nome']; 
+            if(isset($_POST['nomeEsp'])){
+                $var_nome = $_POST['nomeEsp']; 
+                $var_id = $_GET['idEsp']; // Captura o valor do id da URL
                 require_once "../conexao.php";
                 try
                     {   
                         //vamos atualizar na tabela
-                        $sql="update especialidades set nome='$var_nome'
-                        where id=$var_id";
+                        $sql="UPDATE especialidades set nomeEsp='$var_nome'
+                        WHERE idEsp='$var_id'";
                         $query=$conexao->prepare($sql);
                         $query->execute();
                         echo "<p>Atualizado com sucesso!</p>";
@@ -26,8 +26,8 @@
                 }
             }//fim do if
             else {
-                echo "<p>Preencha o <a href='cadespecialidade.php'>
-                formulário</a></p>";
+                echo "<p>Não foi possível realizar a atualização!<br> Por favor preencha o <a href='cadespecialidade.php'>
+                formulário de cadastro</a> novamente.<br><br>Ou apenas retorne para 'Especialidades' na barra superior!</p>";
             }
         }else
         echo "<p>Você não tem permissão 

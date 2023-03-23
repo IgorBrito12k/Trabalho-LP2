@@ -23,23 +23,20 @@
                 executar esta página</p>";
         } else {
             if ($_SESSION['tipoUsuario'] == 1) {
-                if (
-                    isset($_POST['id']) && isset($_POST['nome'])
-                ) {
-                    $id = $_POST['id'];
+                if (isset($_POST['nome'])) {
                     $nome = $_POST['nome'];
                     require_once "../conexao.php";
                     try {
                         //vamos inserir na tabela
-                        $sql = "insert into especialidades (nome)
-                        VALUES ('?')";
+                        $sql = "insert into especialidades (nomeEsp)
+                        VALUES (?)";
                         $query = $conexao->prepare($sql);
-                        $query->execute($nome);
+                        $query->execute([$nome]);
                         $rs = $conexao->lastInsertId()
                             or die(print_r($query->errorInfo(), true));
                         echo "<p>Salvo com sucesso!</p>";
                         echo "<p>Ja com os dados cadastrado você pode acessar a lista de especialidades!</p><br><br>";
-                        echo "<a href='listarespecialidades.php'>Login</a>";
+                        echo "<a href='listarespecialidades.php'>Lista de especialidades</a>";
                     } catch (PDOException $i) {
                         //se houver exceção, exibe
                         die("Erro: <code>" . $i->getMessage() . "</code>");

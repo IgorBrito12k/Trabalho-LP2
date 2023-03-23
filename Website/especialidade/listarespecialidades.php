@@ -15,10 +15,9 @@
             $resultado = $conexao->query($sql);
             $dados = $resultado->fetchAll(PDO::FETCH_ASSOC);
             foreach ($dados as $linha) { //pega cada registro do array para mostrar na tela
-                echo "<p>id: $linha[id] - 
-                $linha[nome] )
-                <a href='editarplano.php?id=$linha[id]'>Editar</a>
-                <a href='excluirplano.php?id=$linha[id]'>Excluir</a></p>";
+                echo "<p>$linha[nomeEsp] -
+                <a href='editarespecialidade.php?idEsp=$linha[idEsp]'>Editar</a>
+                <a href='excluirespecialidades.php?idEsp=$linha[idEsp]'>Excluir</a></p>";
             }
         }else
         echo "<p>Você não tem permissão 

@@ -7,12 +7,12 @@
     } else {
     if ($_SESSION['tipoUsuario'] == 1) {
         //pegar o id do registro a ser editado
-        if (isset($_GET['id'])) {
-            $var_id = $_GET['id'];
+        if (isset($_GET['idEsp'])) {
+            $var_id = $_GET['idEsp'];
             try {
                 //selecionar o registro a ser editado
                 require_once "../conexao.php";
-                $sql = "SELECT * from especialidades where id=$var_id";
+                $sql = "SELECT * from especialidades where idEsp=$var_id";
                 $resultado = $conexao->query($sql);
                 $dados = $resultado->fetchAll(PDO::FETCH_ASSOC);
                 foreach ($dados as $linha) {
@@ -22,14 +22,11 @@
                         <div class="content">
                         <h3 id="titulo">Cadastro de especialidades</h3>
                         <fieldset class="form">
-                        <form name="form1" action="atualizarespecialidade.php"
+                        <form name="form1" action="atualizarespecialidade.php?idEsp=<?php echo $linha['idEsp']; ?>"
                         method="post">
-                        <label for="id">id:<?php echo $linha['id']; ?></label>
-                        <input type="hidden" name="id" 
-                        value="<?php echo $linha['id']; ?>">
                         <label for="nome">Nome</label>
-                        <input type="text" name="nome" required
-                        value="<?php echo $linha['nome']; ?>"><br>
+                        <input type="text" name="nomeEsp" required
+                        value="<?php echo $linha['nomeEsp']; ?>"><br>
     
                         
                     </fieldset>
@@ -43,7 +40,7 @@
             }
         } else {
             echo "<p>Selecione um registro,
-                clique <a href='listarespecialidade.php'>aqui</a></p>";
+                clique <a href='listarespecialidades.php'>aqui</a></p>";
         }
     }else
         echo "<p>Você não tem permissão 
