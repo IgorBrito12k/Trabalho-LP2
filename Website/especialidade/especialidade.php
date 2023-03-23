@@ -21,9 +21,9 @@ require_once("../topo.php");
             echo "<p>Cadastrar uma especialidade:</p>
             <a href='cadespecialidade.php'>Cadastrar</a><br><br>";
             echo "<p>Editar uma especialidade:</p>
-            <a href='editarespecialidade.php'>Editar</a><br><br>";
+            <a href='listarespecialidades.php'>Editar</a><br><br>";
             echo "<p>Excluir uma especialidade:</p>
-            <a href='excluirespecialidades.php'>Excluir</a><br><br>";
+            <a href='listarespecialidades.php'>Excluir</a><br><br>";
             echo "<p>Listar as especialidade:</p>
             <a href='listarespecialidades.php'>Listar</a><br>";
         ?>
