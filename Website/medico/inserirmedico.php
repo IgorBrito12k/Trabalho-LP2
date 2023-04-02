@@ -22,6 +22,8 @@
                 $rs = $conexao->lastInsertId()
                     or die(print_r($query->errorInfo(), true));
                 echo "<p>Salvo com sucesso!</p>";
+                echo "<p>Ja com os dados cadastrado você pode acessar a lista de médicos!</p><br><br>";
+                        echo "<a href='listarmedico.php'>Lista de médicos</a>";
             } catch (PDOException $i) {
                 //se houver exceção, exibe
                 die("Erro: <code>" . $i->getMessage() . "</code>");

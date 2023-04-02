@@ -17,17 +17,29 @@ if (session_status() == PHP_SESSION_NONE) {
         <!-- barra de navegação -->
         <ul>
             <li><a href="../dashboard.php">Início</a></li>
-            <li><a href="../especialidade.php">Especialidades</a></li>
             <?php
-            if (isset($_SESSION['Plano'])) {
-                echo "<li><a href='plano.php'>Plano (".
+            
+            if (isset($_SESSION['Especialidades'])) {
+                echo "<li><a href='../especialidade/listarespecialidades.php'>Especialidades (".
                     $_SESSION['qtde'].")</a></li>";
             } else {
-                echo "<li><a href='plano.php'>Plano</a></li>";        
+                echo "<li><a href='../especialidade/listarespecialidades.php'>Especialidades</a></li>";       
             }
-            echo "<li style='float:right'>";
+            if (isset($_SESSION['Médicos'])) {
+                echo "<li><a href='../medico/listarmedico.php'>Médicos (".
+                    $_SESSION['qtde'].")</a></li>";
+            } else {
+                echo "<li><a href='../medico/listarmedico.php'>Médicos</a></li>";       
+            }
+            if (isset($_SESSION['Plano'])) {
+                echo "<li><a href='../plano/listarplano.php'>Plano (".
+                    $_SESSION['qtde'].")</a></li>";
+            } else {
+                echo "<li><a href='../plano/listarplano.php'>Plano</a></li>";
+                echo "<li style='float:right'>";        
+            }
             if(isset($_SESSION['nomeUsuario'])) {
-                echo "<a class='active' href='meuPerfi.php'>".
+                echo "<a class='active' href='../meuPerfil.php'>".
                     $_SESSION['nomeUsuario']."</a></li>";
             } else {
                 echo "<a class='active' href='login.php'>Login</a></li>";

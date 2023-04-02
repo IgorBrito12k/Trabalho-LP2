@@ -18,6 +18,8 @@
                         $query=$conexao->prepare($sql);
                         $query->execute();
                         echo "<p>Atualizado com sucesso!</p>";
+                        echo "<p>Ja com os dados atualizados você pode acessar a lista de especialidades!</p><br><br>";
+                        echo "<a href='listarespecialidades.php'>Lista de especialidades</a>";
                     }
                 catch (PDOException $i)
                 {

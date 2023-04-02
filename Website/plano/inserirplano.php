@@ -24,7 +24,7 @@
                 $rs = $conexao->lastInsertId()
                     or die(print_r($query->errorInfo(), true));
                 echo "<p>Salvo com sucesso!</p>";
-                echo "<p>Ja com os dados cadastrado você pode acessar a lista de especialidades!</p><br><br>";
+                echo "<p>Ja com os dados cadastrado você pode acessar a lista de planos!</p><br><br>";
                 echo "<a href='listarplano.php'>Lista de planos</a>";
             } catch (PDOException $i) {
                 //se houver exceção, exibe

@@ -21,8 +21,8 @@
                         $query=$conexao->prepare($sql);
                         $query->execute();
                         echo "<p>Atualizado com sucesso!</p>";
-                        echo "<p>Ja com os dados atualizados você pode acessar a lista de plano!</p><br><br>";
-                        echo "<a href='listarmedico.php'>Lista de medicos</a>";
+                        echo "<p>Ja com os dados atualizados você pode acessar a lista de médico!</p><br><br>";
+                        echo "<a href='listarmedico.php'>Lista de médicos</a>";
                     }
                 catch (PDOException $i)
                 {

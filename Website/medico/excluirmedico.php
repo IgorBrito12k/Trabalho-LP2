@@ -17,6 +17,8 @@
                 $query=$conexao->prepare($sql);
                 $query->execute();
                 echo "<p>Excluído com sucesso!</p>";
+                echo "<p>Volte para a <a href='listarmedico.php'>
+                        lista de médicos</a></p>";
             }
         catch (PDOException $i)
         {
