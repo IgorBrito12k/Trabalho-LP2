@@ -28,7 +28,7 @@
                         echo "<p>Você está logado como " .
                             $_SESSION['nomeUsuario'] . "</p><br>";
                         if ($_SESSION['tipoUsuario'] == 1) {
-                            echo " <a href='medico/listarmedicos.php'>Medico</a>";
+                            echo " <a href='medico/listarmedico.php'>Medico</a>";
                             echo " <a href='plano/listarplano.php'>Plano</a>";
                             echo " <a href='./especialidade/listarespecialidades.php'>Especialidade</a>";
                         }

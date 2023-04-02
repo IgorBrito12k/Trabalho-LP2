@@ -16,8 +16,8 @@ if (session_status() == PHP_SESSION_NONE) {
     <body>
         <!-- barra de navegação -->
         <ul>
-            <li><a href="dashboard.php">Início</a></li>
-            <li><a href="especialidade.php">Especialidades</a></li>
+            <li><a href="../dashboard.php">Início</a></li>
+            <li><a href="../especialidade.php">Especialidades</a></li>
             <?php
             if (isset($_SESSION['Plano'])) {
                 echo "<li><a href='plano.php'>Plano (".
