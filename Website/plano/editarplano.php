@@ -22,11 +22,11 @@ require_once "../topo.php";
                         <div class="content">
                         <h3 id="titulo">Cadastro de Planos</h3>
                         <fieldset class="form">
-                        <form name="form1" action="atualizarplano.php"
+                        <form name="form1" action="atualizarplano.php?id=<?php echo $linha['id']; ?>"
                         method="post">
                         <label for="id">id:<?php echo $linha['id']; ?></label>
                         <input type="hidden" name="id" 
-                        value="<?php echo $linha['id']; ?>">
+                        value="<?php echo $linha['id']; ?>"><br>
                         <label for="nome">Nome</label>
                         <input type="text" name="nome" required
                         value="<?php echo $linha['nome']; ?>"><br>

@@ -17,7 +17,7 @@
             $dados = $resultado->fetchAll(PDO::FETCH_ASSOC);
             foreach ($dados as $linha) { //pega cada registro do array para mostrar na tela
                 echo "<p>id: $linha[id] - 
-                $linha[nome] ( $linha[cnpj] )
+                $linha[nome] ( $linha[cnpj] ) - $linha[operadora]
                 <a href='editarplano.php?id=$linha[id]'>Editar</a>
                 <a href='excluirplano.php?id=$linha[id]'>Excluir</a></p>";
             }

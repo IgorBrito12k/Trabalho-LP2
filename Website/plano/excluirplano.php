@@ -7,16 +7,18 @@
     } else {
         if ($_SESSION['tipoUsuario'] == 1) {
         if(isset($_GET['id'])){
-        $var_id = $_GET['id'];
+        $id = $_GET['id'];
         require_once "../conexao.php";
         try
             {   
                 //vamos excluir da tabela
                 $sql="delete from planos 
-                where id=$var_id";
+                where id=$id";
                 $query=$conexao->prepare($sql);
                 $query->execute();
                 echo "<p>Excluído com sucesso!</p>";
+                echo "<p>Volte para a <a href='listarplano.php'>
+                    lista de planos</a></p>";
             }
         catch (PDOException $i)
         {

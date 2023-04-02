@@ -18,7 +18,7 @@
                     $query->execute();
                     echo "<p>Excluído com sucesso!</p><br>";
                     echo "<p>Volte para a <a href='listarespecialidades.php'>
-            lista de especialidades</a></p>";
+                        lista de especialidades</a></p>";
                 }
             catch (PDOException $i)
             {

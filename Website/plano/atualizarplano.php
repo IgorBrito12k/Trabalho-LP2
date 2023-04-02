@@ -6,22 +6,24 @@
          executar esta página</p>";
     } else {
         if ($_SESSION['tipoUsuario'] == 1) {
-            if(isset($_POST['id']) && isset($_POST['nome']) &&
+            if(isset($_POST['nome']) &&
             isset($_POST['cnpj']) && isset($_POST['operadora'])){
-                $var_id = $_POST['id'];
-                $var_nome = $_POST['nome']; 
-                $var_email = $_POST['cnpj']; 
-                $var_senha = $_POST['operadora']; 
+                $nome = $_POST['nome']; 
+                $cnpj = $_POST['cnpj']; 
+                $id = $_GET['id'];
+                $operadora = $_POST['operadora']; 
                 require_once "../conexao.php";
                 try
                     {   
                         //vamos atualizar na tabela
-                        $sql="update planos set nome='$var_nome',
-                        cnpj='$var_cnpj',operadora='$var_operadora' 
-                        where id=$var_id";
+                        $sql="update planos set nome='$nome',
+                        cnpj='$cnpj',operadora='$operadora' 
+                        where id=$id";
                         $query=$conexao->prepare($sql);
                         $query->execute();
                         echo "<p>Atualizado com sucesso!</p>";
+                        echo "<p>Ja com os dados cadastrado você pode acessar a lista de plano!</p><br><br>";
+                        echo "<a href='listarplano.php'>Lista de planos</a>";
                     }
                 catch (PDOException $i)
                 {

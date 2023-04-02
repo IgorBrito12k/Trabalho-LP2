@@ -7,8 +7,6 @@ if ($_SESSION['tipoUsuario'] == 1) {
 <fieldset class="form">
     <form name="form1" action="inserirplano.php"
     method="post">
-    <label for="id">id</label>
-    <input type="text" name="id"><br>
     <label for="nome">Nome</label>
     <input type="text" name="nome" required><br>
     <label for="cnpj">CNPJ</label>
