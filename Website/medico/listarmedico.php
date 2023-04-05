@@ -21,9 +21,19 @@
                 <a href='editarmedico.php?id=$linha[id]'>Editar</a>
                 <a href='excluirmedico.php?id=$linha[id]'>Excluir</a></p>";
             }
-        }else
-        echo "<p>Você não tem permissão 
-        para executar esta ação.</p>";
+        }else if ($_SESSION['tipoUsuario'] == 3) {
+            require_once "../conexao.php";
+            $sql = "SELECT * from medicos";
+            $resultado = $conexao->query($sql);
+            $dados = $resultado->fetchAll(PDO::FETCH_ASSOC);
+            foreach ($dados as $linha) { //pega cada registro do array para mostrar na tela
+                echo "<p>id: $linha[id] - 
+                $linha[nome], ( $linha[crm] )";
+            }
+        } else {
+            echo "<p>Você não tem permissão 
+            para executar esta ação.</p>";
+        }
     }//fim do else
         require_once "../rodape.php";
     ?>

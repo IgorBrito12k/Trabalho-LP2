@@ -24,7 +24,7 @@
                     if (isset($_SESSION['nomeUsuario'])) {
                         //tipo = 1 - administrador (pode acessar tudo)
                         //tipo = 2 - Médico (acessa e altera o Plano e especialidades, mas não exclui)
-                        //tipo = 3 - Paciente (acessa Plano, médico, especialidades, mas não exclui)
+                        //tipo = 3 - Paciente (acessa Plano e médico, mas não exclui)
                         echo "<p>Você está logado como " .
                             $_SESSION['nomeUsuario'] . "</p><br>";
                         if ($_SESSION['tipoUsuario'] == 1) {
@@ -34,10 +34,12 @@
                         }
                         
                         if ($_SESSION['tipoUsuario'] == 2) {
-                            echo " <a href='planos/listarplanos.php'>Planos</a>";
+                            echo " <a href='../plano/listarplano.php'>Planos </a>";
+                            echo "<a href='./especialidade/listarespecialidades.php'>Especialidade</a>";
                         }
                         if ($_SESSION['tipoUsuario'] == 3) {
-                            echo " <a href='planos/listarplanos.php'>Planos</a>";
+                            echo " <a href='../plano/listarplano.php'>Planos</a>";
+                            echo " <a href='medico/listarmedico.php'>Medico</a>";
                         }
                     } 
     
