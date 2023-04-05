@@ -7,12 +7,12 @@ require_once "../topo.php";
     } else {
     if ($_SESSION['tipoUsuario'] == 1) {
         //pegar o id do registro a ser editado
-        if (isset($_GET['id'])) {
-            $var_id = $_GET['id'];
+        if (isset($_GET['idPlano'])) {
+            $var_id = $_GET['idPlano'];
             try {
                 //selecionar o registro a ser editado
                 require_once "../conexao.php";
-                $sql = "SELECT * from planos where id=$var_id";
+                $sql = "SELECT * from planos where idPlano=$var_id";
                 $resultado = $conexao->query($sql);
                 $dados = $resultado->fetchAll(PDO::FETCH_ASSOC);
                 foreach ($dados as $linha) {
@@ -22,11 +22,11 @@ require_once "../topo.php";
                         <div class="content">
                         <h3 id="titulo">Cadastro de Planos</h3>
                         <fieldset class="form">
-                        <form name="form1" action="atualizarplano.php?id=<?php echo $linha['id']; ?>"
+                        <form name="form1" action="atualizarplano.php?idPlano=<?php echo $linha['idPlano']; ?>"
                         method="post">
-                        <label for="id">id:<?php echo $linha['id']; ?></label>
-                        <input type="hidden" name="id" 
-                        value="<?php echo $linha['id']; ?>"><br>
+                        <label for="idPlano">id:<?php echo $linha['idPlano']; ?></label>
+                        <input type="hidden" name="idPlano" 
+                        value="<?php echo $linha['idPlano']; ?>"><br>
                         <label for="nome">Nome</label>
                         <input type="text" name="nome" required
                         value="<?php echo $linha['nome']; ?>"><br>

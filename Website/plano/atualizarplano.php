@@ -10,7 +10,7 @@
             isset($_POST['cnpj']) && isset($_POST['operadora'])){
                 $nome = $_POST['nome']; 
                 $cnpj = $_POST['cnpj']; 
-                $id = $_GET['id'];
+                $id = $_GET['idPlano'];
                 $operadora = $_POST['operadora']; 
                 require_once "../conexao.php";
                 try
@@ -18,7 +18,7 @@
                         //vamos atualizar na tabela
                         $sql="update planos set nome='$nome',
                         cnpj='$cnpj',operadora='$operadora' 
-                        where id=$id";
+                        where idPlano=$id";
                         $query=$conexao->prepare($sql);
                         $query->execute();
                         echo "<p>Atualizado com sucesso!</p>";

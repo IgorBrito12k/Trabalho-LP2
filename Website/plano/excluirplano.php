@@ -6,14 +6,14 @@
          executar esta página</p>";
     } else {
         if ($_SESSION['tipoUsuario'] == 1) {
-        if(isset($_GET['id'])){
-        $id = $_GET['id'];
+        if(isset($_GET['idPlano'])){
+        $id = $_GET['idPlano'];
         require_once "../conexao.php";
         try
             {   
                 //vamos excluir da tabela
                 $sql="delete from planos 
-                where id=$id";
+                where idPlano=$id";
                 $query=$conexao->prepare($sql);
                 $query->execute();
                 echo "<p>Excluído com sucesso!</p>";
