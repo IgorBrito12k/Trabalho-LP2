@@ -31,6 +31,12 @@ if (session_status() == PHP_SESSION_NONE) {
             } else {
                 echo "<li><a href='../medico/listarmedico.php'>Médicos</a></li>";       
             }
+            if (isset($_SESSION['Rémedios'])) {
+                echo "<li><a href='../remedios/listarremedios.php'>Remédios (".
+                    $_SESSION['qtde'].")</a></li>";
+            } else {
+                echo "<li><a href='../remedios/listarremedios.php'>Remédios</a></li>";       
+            }
             if (isset($_SESSION['Plano'])) {
                 echo "<li><a href='../plano/listarplano.php'>Plano (".
                     $_SESSION['qtde'].")</a></li>";

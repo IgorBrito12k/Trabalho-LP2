@@ -31,6 +31,7 @@
                             echo " <a href='medico/listarmedico.php'>Medico</a>";
                             echo " <a href='plano/listarplano.php'>Plano</a>";
                             echo " <a href='./especialidade/listarespecialidades.php'>Especialidade</a>";
+                            echo " <a href='./remedios/listarremedios.php'>Remédios</a>";
                         }
                         
                         if ($_SESSION['tipoUsuario'] == 2) {
