@@ -4,7 +4,7 @@ if(isset($_SESSION['nomeUsuario'])){
     ?>
         <h2>Gerenciamento de Perfil</h2><br>
         <a href="mudarperfil.php">Meu perfil</a><br>
-        <a href="plano.php">Meu Plano</a><br><br>
+        <a href="meuplano.php">Meu Plano</a><br><br>
         <a href="logout.php">Sair</a><br>
     <?php
 }else{

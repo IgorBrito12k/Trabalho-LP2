@@ -13,14 +13,14 @@
         text-align: center;
     }
     </style>
-</head>
-    <body>
-        <div class="container">              
-                <?php
+    </head>
+<body>
+    <div class="container">              
+            <?php
                 if(isset($_SESSION['nomeUsuario'])){ 
                     //echo "<h1>Esta é a dashboard</h1>";
                     echo "<h2>Sistema de Hospital</h2>"; 
-                    
+                        
                     if (isset($_SESSION['nomeUsuario'])) {
                         //tipo = 1 - administrador (pode acessar tudo)
                         //tipo = 2 - Médico (acessa e altera o Plano e especialidades, mas não exclui)
@@ -43,15 +43,15 @@
                             echo " <a href='medico/listarmedico.php'>Medico</a>";
                         }
                     } 
-    
+        
                 } else {
-                     echo "<p>Você precisa estar logado para acessar esta função.</p><br><br>";
-                     echo " <a href='login.php'>Login</a>"; 
+                    echo "<p>Você precisa estar logado para acessar esta função.</p><br><br>";
+                    echo " <a href='login.php'>Login</a>"; 
                 }
-                    ?>
-                </div>
-                </body>
-            </html>
+            ?>
+        </div>
+    </body>
+</html>
         
 
 <?php
