@@ -68,9 +68,9 @@
                     <div class="input-box">
                         <label for="tipo">Tipo de usuário</label>
                         <select name="tipo">
-                        <option value="1">Administrador</option>
-                        <option value="2">Médico</option>
-                        <option value="3">Paciente</option>
+                            <option value="1">Administrador</option>
+                            <option value="2">Médico</option>
+                            <option value="3">Paciente</option>
                         </select>
                     </div>
                 </div>

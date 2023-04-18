@@ -42,7 +42,8 @@ img {
     /* Deixar os inputs um abaixo do outro */
     flex-direction: column;
     background-color: white;
-    padding: 156px;
+    padding-left: 115px;
+    padding-right: 100px;
 }
 
 .cabecalho-formulario {
