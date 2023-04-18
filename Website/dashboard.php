@@ -27,7 +27,7 @@
                         //tipo = 3 - Paciente (acessa Plano e médico, mas não exclui)
                         echo "<p class='texto'>Você está logado como " .
                             $_SESSION['nomeUsuario'] . "</p><br>";
-                        echo "<p>Em qual setor você gostaria de ir?</p><br><br>";
+                        echo "<p class='texto'>Em qual setor você gostaria de ir?</p><br><br>";
                         if ($_SESSION['tipoUsuario'] == 1) {
                             echo " <a class='link' href='medico/listarmedico.php'>Medico</a>";
                             echo " <a class='link' href='plano/listarplano.php'>Plano</a>";

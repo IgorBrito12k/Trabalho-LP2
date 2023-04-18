@@ -25,8 +25,7 @@ ul {
 a {
     cursor: pointer;  
     color: #000000;
-    font-size: 20px;  
-    margin-bottom: 10px;  
+    font-size: 20px;   
 }
 
 
@@ -39,7 +38,7 @@ li a {
 
 li a:hover {
     background-color: rgb(170, 102, 167);
-}
+} 
 
 h2, fieldset {
     margin-top: 200px;
@@ -58,7 +57,6 @@ hr {
     margin-right: auto;
     width: 700px;
 }
-
 
 .texto {
     margin-bottom: 10px;
@@ -83,8 +81,6 @@ hr {
 
 .link2 {
     background: linear-gradient(217deg, rgba(172,49,25,0.9682247899159664) 27%, rgba(156,45,154,1) 83%);
-    margin-top: 20px;
-    margin-left: 20px;
     padding: 4px 10px;
     border-radius: 5px;
     text-decoration: none;
@@ -119,4 +115,20 @@ hr {
     font-weight: bold;
     text-align: center;
     margin-top: 15px;
+}
+
+.botao-retorno {
+    position: fixed;
+    bottom: 70px;
+    right: 0;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    background: linear-gradient(217deg, rgba(172,49,25,0.9682247899159664) 27%, rgba(156,45,154,1) 83%);
+}
+
+.link:hover, .link2:hover {
+    background-color: rgb(170, 102, 167) !important;
 }

@@ -123,3 +123,9 @@ form {
     padding: 15px 20px;
     cursor: pointer;
 }
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}

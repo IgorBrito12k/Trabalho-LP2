@@ -40,7 +40,7 @@
                         <input class="nasc required" type="password" name="senha" placeholder="Digite sua senha">
                     </div>
                 </div><br><br>
-                <a href="">Esqueceu sua senha?</a><br>
+                <a class='link' href="#">Esqueceu sua senha?</a><br>
                 <a href="dashboard.php">
                     <button class="botao-logar">Logar</button>
                 </a>
