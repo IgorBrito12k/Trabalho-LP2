@@ -2,7 +2,7 @@
     require_once "../topo.php";
     if(!isset($_SESSION['usuarioLogado']) ||
         $_SESSION['usuarioLogado']==false){
-        echo "<p>Você não tem permissão para
+        echo "<p class='texto2'>Você não tem permissão para
          executar esta página</p>";
     } else {
         if ($_SESSION['tipoUsuario'] == 1) {
@@ -22,9 +22,9 @@
                         where idRemedio=$id";
                         $query=$conexao->prepare($sql);
                         $query->execute();
-                        echo "<p>Atualizado com sucesso!</p>";
-                        echo "<p>Ja com os dados cadastrado você pode acessar a lista de remédios!</p><br><br>";
-                        echo "<a href='listarremedios.php'>Lista de remédios</a>";
+                        echo "<p class='texto2'>Atualizado com sucesso!</p>";
+                        echo "<p class='texto2'>Ja com os dados cadastrado você pode acessar a lista de remédios!</p><br><br>";
+                        echo "<a class='link2' href='listarremedios.php'>Lista de remédios</a>";
                     }
                 catch (PDOException $i)
                 {
@@ -33,11 +33,11 @@
                 }
             }//fim do if
             else {
-                echo "<p>Preencha o <a href='cadremedios.php'>
+                echo "<p class='texto2'>Preencha o <a href='cadremedios.php'>
                 formulário</a></p>";
             }
         }else
-        echo "<p>Você não tem permissão 
+        echo "<p class='texto2'>Você não tem permissão 
         para executar esta ação.</p>";
     }//fim do else da SESSION
     require_once "../rodape.php";
