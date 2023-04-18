@@ -8,6 +8,7 @@
         if ($_SESSION['tipoUsuario'] == 1) {
             if(isset($_POST['nome']) &&
             isset($_POST['cnpj']) && isset($_POST['operadora'])){
+                $idPessoa = $_POST['idPessoa'];
                 $nome = $_POST['nome']; 
                 $cnpj = $_POST['cnpj']; 
                 $id = $_GET['idPlano'];
@@ -16,8 +17,8 @@
                 try
                     {   
                         //vamos atualizar na tabela
-                        $sql="update planos set nome='$nome',
-                        cnpj='$cnpj',operadora='$operadora' 
+                        $sql="update planos set idPessoa='$idPessoa', nome='$nome',
+                        cnpj='$cnpj', operadora='$operadora' 
                         where idPlano=$id";
                         $query=$conexao->prepare($sql);
                         $query->execute();

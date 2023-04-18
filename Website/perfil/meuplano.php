@@ -1,8 +1,8 @@
 <?php
-    require_once "topo.php";
+    require_once "../topo.php";
     if (isset($_SESSION['idUsuario'])) {
         echo "<h2>Meus planos</h2><br><br>";
-        require_once "conexao.php";
+        require_once "../conexao.php";
         $sql = "SELECT * from planos where idPessoa=".$_SESSION['idUsuario'];
         $resultado = $conexao->query($sql);
         $dados = $resultado->fetchAll(PDO::FETCH_ASSOC);
@@ -15,5 +15,5 @@
     }else
     echo "<p>Você não tem permissão 
     para executar esta ação.</p>";
-    require_once "rodape.php";
+    require_once "../rodape.php";
 ?>

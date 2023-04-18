@@ -45,10 +45,10 @@ if (session_status() == PHP_SESSION_NONE) {
                 echo "<li style='float:right'>";        
             }
             if(isset($_SESSION['nomeUsuario'])) {
-                echo "<a class='active' href='../meuPerfil.php'>".
+                echo "<a class='active' href='../perfil/meuPerfil.php'>".
                     $_SESSION['nomeUsuario']."</a></li>";
             } else {
-                echo "<a class='active' href='login.php'>Login</a></li>";
+                echo "<a class='active' href='../login.php'>Login</a></li>";
             }
             ?>
         </ul>

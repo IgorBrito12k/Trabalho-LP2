@@ -7,17 +7,18 @@
 } else {
     if ($_SESSION['tipoUsuario'] == 1) {
         if (
-            isset($_POST['nome']) &&
+            isset($_POST['idPessoa']) && isset($_POST['nome']) &&
             isset($_POST['cnpj']) && isset($_POST['operadora'])
         ) {
+            $idPessoa = $_POST['idPessoa'];
             $nome = $_POST['nome'];
             $cnpj = $_POST['cnpj'];
             $operadora = $_POST['operadora'];
             require_once "../conexao.php";
             try {
                 //vamos inserir na tabela
-                $sql = "insert into planos (nome,cnpj,operadora)
-                values ('$nome','$cnpj',
+                $sql = "insert into planos (idPessoa, nome, cnpj, operadora)
+                values ('$idPessoa','$nome','$cnpj',
                     '$operadora')";
                 $query = $conexao->prepare($sql);
                 $query->execute();

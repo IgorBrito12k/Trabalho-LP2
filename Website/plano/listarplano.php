@@ -4,7 +4,7 @@
 ?>
     <a href="cadplano.php">Novo</a><br>
     <h2>Planos cadastrados</h2>
-    <?php
+<?php
     if(!isset($_SESSION['usuarioLogado']) ||
         $_SESSION['usuarioLogado']==false){
         echo "<p>Você não tem permissão para
@@ -16,7 +16,7 @@
             $resultado = $conexao->query($sql);
             $dados = $resultado->fetchAll(PDO::FETCH_ASSOC);
             foreach ($dados as $linha) { //pega cada registro do array para mostrar na tela
-                echo "<p>id: $linha[idPlano] - 
+                echo "<p>id: $linha[idPlano] - idPessoa: $linha[idPessoa] -
                 $linha[nome] ( $linha[cnpj] ) - $linha[operadora]
                 <a href='editarplano.php?idPlano=$linha[idPlano]'>Editar</a>
                 <a href='excluirplano.php?idPlano=$linha[idPlano]'>Excluir</a></p>";
@@ -27,7 +27,7 @@
             $resultado = $conexao->query($sql);
             $dados = $resultado->fetchAll(PDO::FETCH_ASSOC);
             foreach ($dados as $linha) { //pega cada registro do array para mostrar na tela
-                echo "<p>id: $linha[idPlano] - 
+                echo "id: $linha[idPlano] - idPessoa: $linha[idPessoa] -
                 $linha[nome] ( $linha[cnpj] ) - $linha[operadora]";
             }
         } else if ($_SESSION['tipoUsuario'] == 2) {
@@ -36,7 +36,7 @@
             $resultado = $conexao->query($sql);
             $dados = $resultado->fetchAll(PDO::FETCH_ASSOC);
             foreach ($dados as $linha) { //pega cada registro do array para mostrar na tela
-                echo "<p>id: $linha[idPlano] - 
+                echo "id: $linha[idPlano] - idPessoa: $linha[idPessoa] -
                 $linha[nome] ( $linha[cnpj] ) - $linha[operadora]";
             } 
         } else {
@@ -45,4 +45,4 @@
         }
     }//fim do else
         require_once "../rodape.php";
-    ?>
+?>

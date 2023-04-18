@@ -8,11 +8,11 @@ require_once "../topo.php";
     if ($_SESSION['tipoUsuario'] == 1) {
         //pegar o id do registro a ser editado
         if (isset($_GET['idPlano'])) {
-            $var_id = $_GET['idPlano'];
+            $id = $_GET['idPlano'];
             try {
                 //selecionar o registro a ser editado
                 require_once "../conexao.php";
-                $sql = "SELECT * from planos where idPlano=$var_id";
+                $sql = "SELECT * from planos where idPlano=$id";
                 $resultado = $conexao->query($sql);
                 $dados = $resultado->fetchAll(PDO::FETCH_ASSOC);
                 foreach ($dados as $linha) {
@@ -27,6 +27,9 @@ require_once "../topo.php";
                         <label for="idPlano">id:<?php echo $linha['idPlano']; ?></label>
                         <input type="hidden" name="idPlano" 
                         value="<?php echo $linha['idPlano']; ?>"><br>
+                        <label for="idPessoa">ID Pessoa</label>
+                        <input type="text" name="idPessoa" required
+                        value="<?php echo $linha['nome']; ?>"><br>
                         <label for="nome">Nome</label>
                         <input type="text" name="nome" required
                         value="<?php echo $linha['nome']; ?>"><br>
