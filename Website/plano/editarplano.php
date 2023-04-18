@@ -2,7 +2,7 @@
 require_once "../topo.php";
     if(!isset($_SESSION['usuarioLogado']) ||
         $_SESSION['usuarioLogado']==false){
-        echo "<p>Você não tem permissão para
+        echo "<p class='texto2'>Você não tem permissão para
          executar esta página</p>";
     } else {
     if ($_SESSION['tipoUsuario'] == 1) {
@@ -20,29 +20,27 @@ require_once "../topo.php";
 ?>
                         <!-- html -->
                         <div class="content">
-                        <h3 id="titulo">Cadastro de Planos</h3>
-                        <fieldset class="form">
-                        <form name="form1" action="atualizarplano.php?idPlano=<?php echo $linha['idPlano']; ?>"
-                        method="post">
-                        <label for="idPlano">id:<?php echo $linha['idPlano']; ?></label>
-                        <input type="hidden" name="idPlano" 
-                        value="<?php echo $linha['idPlano']; ?>"><br>
-                        <label for="idPessoa">ID Pessoa</label>
-                        <input type="text" name="idPessoa" required
-                        value="<?php echo $linha['nome']; ?>"><br>
-                        <label for="nome">Nome</label>
-                        <input type="text" name="nome" required
-                        value="<?php echo $linha['nome']; ?>"><br>
-                        <label for="cnpj">CNPJ</label>
-                        <input type="cnpj" name="cnpj" required
-                        value="<?php echo $linha['cnpj']; ?>"><br>
-                        <label for="operadora">Operadora</label>
-                        <input type="operadora" name="operadora" required
-                        value="<?php echo $linha['operadora']; ?>"><br>
-                        
-                    </fieldset>
-                        <input class="botao" type="submit" value="Cadastrar">
-                        </form>
+                            <h2 id="titulo">Cadastro de Planos</h2>
+                                <form name="form1" action="atualizarplano.php?idPlano=<?php echo $linha['idPlano']; ?>"
+                                method="post">
+                                    <label for="idPlano">id:<?php echo $linha['idPlano']; ?></label>
+                                    <input class="input" type="hidden" name="idPlano" 
+                                    value="<?php echo $linha['idPlano']; ?>"><br>
+                                    <label for="idPessoa">ID Pessoa</label>
+                                    <input class="input" type="text" name="idPessoa" required
+                                    value="<?php echo $linha['nome']; ?>"><br>
+                                    <label for="nome">Nome</label>
+                                    <input class="input" type="text" name="nome" required
+                                    value="<?php echo $linha['nome']; ?>"><br>
+                                    <label for="cnpj">CNPJ</label>
+                                    <input class="input" type="cnpj" name="cnpj" required
+                                    value="<?php echo $linha['cnpj']; ?>"><br>
+                                    <label for="operadora">Operadora</label>
+                                    <input class="input" type="operadora" name="operadora" required
+                                    value="<?php echo $linha['operadora']; ?>"><br>
+                                    
+                                    <input class="link2" type="submit" value="Cadastrar">
+                                </form>
                         </div>
                         <?php
                 }
@@ -50,11 +48,11 @@ require_once "../topo.php";
                 die("Erro: <code>" . $erro->getMessage() . "</code>");
             }
         } else {
-            echo "<p>Selecione um registro,
+            echo "<p class='texto2'>Selecione um registro,
                 clique <a href='listarplano.php'>aqui</a></p>";
         }
     }else
-        echo "<p>Você não tem permissão 
+        echo "<p class='texto2'>Você não tem permissão 
         para executar esta ação.</p>";
 }//fim do else da SESSION
 require_once "../rodape.php";

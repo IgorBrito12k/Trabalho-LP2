@@ -17,15 +17,15 @@ require_once("../topo.php");
 <body>
     <div class="container">
         <?php
-            echo "<br><h1>Bem vindo a planos, para onde vc gostaria de ir:</h1><br><br>";
-            echo "<p>Cadastrar uma plano:</p>
-            <a href='cadplano.php'>Cadastrar</a><br><br>";
-            echo "<p>Editar um plano:</p>
-            <a href='listarplano.php'>Editar</a><br><br>";
-            echo "<p>Excluir um plano:</p>
-            <a href='listarplano.php'>Excluir</a><br><br>";
-            echo "<p>Listar os planos:</p>
-            <a href='listarplano.php'>Listar</a><br>";
+            echo "<br><h2>Bem vindo a planos, para onde vc gostaria de ir:</h2><br><br>";
+            echo "<p class='texto2'>Cadastrar uma plano:</p><br>
+            <a class='link2' href='cadplano.php'>Cadastrar</a><br><br>";
+            echo "<p class='texto2'>Editar um plano:</p><br>
+            <a class='link2' href='listarplano.php'>Editar</a><br><br>";
+            echo "<p class='texto2'>Excluir um plano:</p><br>
+            <a class='link2' href='listarplano.php'>Excluir</a><br><br>";
+            echo "<p class='texto2'>Listar os planos:</p><br>
+            <a class='link2' href='listarplano.php'>Listar</a><br>";
         ?>
     </div>
 </body>

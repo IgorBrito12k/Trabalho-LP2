@@ -24,7 +24,7 @@
                             <form name="form1" action="atualizarespecialidade.php?idEsp=<?php echo $linha['idEsp']; ?>"
                             method="post">
                                 <label for="nome">Nome</label>
-                                <input type="text" name="nomeEsp" required
+                                <input class="input" type="text" name="nomeEsp" required
                                 value="<?php echo $linha['nomeEsp']; ?>"><br>
 
                                 <input class="link2" type="submit" value="Cadastrar">

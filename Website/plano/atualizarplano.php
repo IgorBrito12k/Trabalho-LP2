@@ -2,7 +2,7 @@
     require_once "../topo.php";
     if(!isset($_SESSION['usuarioLogado']) ||
         $_SESSION['usuarioLogado']==false){
-        echo "<p>Você não tem permissão para
+        echo "<p class='texto2'>Você não tem permissão para
          executar esta página</p>";
     } else {
         if ($_SESSION['tipoUsuario'] == 1) {
@@ -22,9 +22,9 @@
                         where idPlano=$id";
                         $query=$conexao->prepare($sql);
                         $query->execute();
-                        echo "<p>Atualizado com sucesso!</p>";
-                        echo "<p>Ja com os dados cadastrado você pode acessar a lista de plano!</p><br><br>";
-                        echo "<a href='listarplano.php'>Lista de planos</a>";
+                        echo "<p class='texto2'>Atualizado com sucesso!</p>";
+                        echo "<p class='texto2'>Ja com os dados cadastrado você pode acessar a lista de plano!</p><br><br>";
+                        echo "<a class='link2' href='listarplano.php'>Lista de planos</a>";
                     }
                 catch (PDOException $i)
                 {
@@ -33,11 +33,11 @@
                 }
             }//fim do if
             else {
-                echo "<p>Preencha o <a href='cadplano.php'>
+                echo "<p class='texto2'>Preencha o <a class='link2' href='cadplano.php'>
                 formulário</a></p>";
             }
         }else
-        echo "<p>Você não tem permissão 
+        echo "<p class='texto2'>Você não tem permissão 
         para executar esta ação.</p>";
     }//fim do else da SESSION
     require_once "../rodape.php";
