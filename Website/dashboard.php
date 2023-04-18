@@ -39,7 +39,7 @@
                         if ($_SESSION['tipoUsuario'] == 2) {
                             echo " <a class='link' href='../plano/listarplano.php'>Planos </a>";
                             echo "<a class='link' href='./especialidade/listarespecialidades.php'>Especialidade</a><br><br>";
-                            echo "<a class='link' href='../perfil/meuPerfil.php'>Meu Perfil</a>";
+                            echo "<a class='link' href='../perfil/meuPerfil.php'>Especialidade</a>";
                         }
                         if ($_SESSION['tipoUsuario'] == 3) {
                             echo " <a class='link' href='../plano/listarplano.php'>Planos</a>";

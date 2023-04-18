@@ -39,10 +39,10 @@ require_once("topo.php");
                 // se encontrou o registro, não exibe mensagem de erro
                 $encontrouRegistro = true;
 
-                echo "<h1>Login validado</h1><br>";
-                echo "<p>Siga para a sua dashboard clicando em no
+                echo "<h2>Login validado</h2><br>";
+                echo "<p class='texto'>Siga para a sua dashboard clicando em no
                 'Inicio' na barra superior ou abaixo:</p><br>";
-                echo "<a href='dashboard.php'>Dashboard</a>";
+                echo "<a class='link' href='dashboard.php'>Dashboard</a>";
             }
 
             if (!$encontrouRegistro) {

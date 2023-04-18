@@ -20,28 +20,28 @@ if (session_status() == PHP_SESSION_NONE) {
             <?php
             
             if (isset($_SESSION['Especialidades'])) {
-                echo "<li><a href='../especialidade/listarespecialidades.php'>Especialidades (".
+                echo "<li><a href='../especialidade/especialidade.php'>Especialidades (".
                     $_SESSION['qtde'].")</a></li>";
             } else {
-                echo "<li><a href='../especialidade/listarespecialidades.php'>Especialidades</a></li>";       
+                echo "<li><a href='../especialidade/especialidade.php'>Especialidades</a></li>";       
             }
             if (isset($_SESSION['Médicos'])) {
-                echo "<li><a href='../medico/listarmedico.php'>Médicos (".
+                echo "<li><a href='../medico/medico.php'>Médicos (".
                     $_SESSION['qtde'].")</a></li>";
             } else {
-                echo "<li><a href='../medico/listarmedico.php'>Médicos</a></li>";       
+                echo "<li><a href='../medico/medico.php'>Médicos</a></li>";       
             }
             if (isset($_SESSION['Rémedios'])) {
-                echo "<li><a href='../remedios/listarremedios.php'>Remédios (".
+                echo "<li><a href='../remedios/remedios.php'>Remédios (".
                     $_SESSION['qtde'].")</a></li>";
             } else {
-                echo "<li><a href='../remedios/listarremedios.php'>Remédios</a></li>";       
+                echo "<li><a href='../remedios/remedios.php'>Remédios</a></li>";       
             }
             if (isset($_SESSION['Plano'])) {
-                echo "<li><a href='../plano/listarplano.php'>Plano (".
+                echo "<li><a href='../plano/plano.php'>Plano (".
                     $_SESSION['qtde'].")</a></li>";
             } else {
-                echo "<li><a href='../plano/listarplano.php'>Plano</a></li>";
+                echo "<li><a href='../plano/plano.php'>Plano</a></li>";
                 echo "<li style='float:right'>";        
             }
             if(isset($_SESSION['nomeUsuario'])) {
