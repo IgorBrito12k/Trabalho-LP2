@@ -17,15 +17,15 @@ require_once("../topo.php");
 <body>
     <div class="container">
         <?php
-            echo "<br><h1>bem vindo ala médicos, para onde vc gostaria de ir:</h1><br><br>";
-            echo "<p>Cadastrar um médicos:</p>
-            <a href='cadmedicos.php'>Cadastrar</a><br><br>";
-            echo "<p>Editar um registro de um médico:</p>
-            <a href='listarmedicos.php'>Editar</a><br><br>";
-            echo "<p>Excluir um registro de um médico:</p>
-            <a href='listarmedicos.php'>Excluir</a><br><br>";
-            echo "<p>Listar os médicos:</p>
-            <a href='listarmedicos.php'>Listar</a><br>";
+            echo "<br><h2>Bem vindo ala médicos, para onde vc gostaria de ir:</h2><br><br>";
+            echo "<p class='texto2'>Cadastrar um médicos:</p>
+            <a class='link2' href='cadmedicos.php'>Cadastrar</a><br><br>";
+            echo "<p class='texto2'>Editar um registro de um médico:</p>
+            <a class='link2' href='listarmedicos.php'>Editar</a><br><br>";
+            echo "<p class='texto2'>Excluir um registro de um médico:</p>
+            <a class='link2' href='listarmedicos.php'>Excluir</a><br><br>";
+            echo "<p class='texto2'>Listar os médicos:</p>
+            <a class='link2' href='listarmedicos.php'>Listar</a><br>";
         ?>
     </div>
 </body>
