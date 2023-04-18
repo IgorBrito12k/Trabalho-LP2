@@ -27,6 +27,9 @@ require_once "../topo.php";
                         <label for="idRemedio">id:<?php echo $linha['idRemedio']; ?></label>
                         <input type="hidden" name="idRemedio" 
                         value="<?php echo $linha['idRemedio']; ?>"><br>
+                        <label for="idPessoa">ID Pessoa</label>
+                        <input type="text" name="idPessoa" required
+                        value="<?php echo $linha['nome']; ?>"><br>
                         <label for="nome">Nome</label>
                         <input type="text" name="nome" required
                         value="<?php echo $linha['nome']; ?>"><br>

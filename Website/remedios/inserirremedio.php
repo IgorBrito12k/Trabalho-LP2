@@ -7,17 +7,18 @@
 } else {
     if ($_SESSION['tipoUsuario'] == 1) {
         if (
-            isset($_POST['nome']) &&
+            isset($_POST['idPessoa']) && isset($_POST['nome']) &&
             isset($_POST['marca']) && isset($_POST['lugar'])
         ) {
+            $idPessoa = $_POST['idPessoa'];
             $nome = $_POST['nome'];
             $marca = $_POST['marca'];
             $lugar = $_POST['lugar'];
             require_once "../conexao.php";
             try {
                 //vamos inserir na tabela
-                $sql = "insert into remedios (nome,marca,lugar)
-                values ('$nome','$marca',
+                $sql = "insert into remedios (idPessoa,nome,marca,lugar)
+                values ('$idPessoa','$nome','$marca',
                     '$lugar')";
                 $query = $conexao->prepare($sql);
                 $query->execute();

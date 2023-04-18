@@ -7,6 +7,8 @@ if ($_SESSION['tipoUsuario'] == 1) {
 <fieldset class="form">
     <form name="form1" action="inserirremedio.php"
     method="post">
+    <label for="idPessoa">ID Pessoa</label><br>
+    <input type="text" name="idPessoa" required><br>
     <label for="nome">Nome</label>
     <input type="text" name="nome" required><br>
     <label for="marca">Marca</label>

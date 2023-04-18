@@ -12,11 +12,12 @@
                 $marca = $_POST['marca']; 
                 $id = $_GET['idRemedio'];
                 $lugar = $_POST['lugar']; 
+                $idPessoa = $_GET['idPessoa'];
                 require_once "../conexao.php";
                 try
                     {   
                         //vamos atualizar na tabela
-                        $sql="update remedios set nome='$nome',
+                        $sql="update remedios set idPessoa='$idPessoa', nome='$nome',
                         marca='$marca',lugar='$lugar' 
                         where idRemedio=$id";
                         $query=$conexao->prepare($sql);
