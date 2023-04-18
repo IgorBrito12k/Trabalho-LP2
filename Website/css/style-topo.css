@@ -6,7 +6,7 @@
     font-family: 'Roboto';
 }
 
-html{
+html, body{
     text-align: center;
     height: 100vh;
 }
@@ -38,7 +38,66 @@ li a {
 
 li a:hover {
     background-color: rgb(170, 102, 167);
-  }
+}
+
+h2, fieldset {
+    margin-top: 200px;
+    margin-bottom: 15px;
+}
+
+label{
+    color: #000000;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+hr {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+
+.texto {
+    margin-bottom: 10px;
+}
+
+.link {
+    background: linear-gradient(217deg, rgba(172,49,25,0.9682247899159664) 27%, rgba(156,45,154,1) 83%);
+    display: inline-block;
+    margin: 15px;
+    padding: 20px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.texto2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.link2 {
+    background: linear-gradient(217deg, rgba(172,49,25,0.9682247899159664) 27%, rgba(156,45,154,1) 83%);
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 4px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.input{
+    height: 20px;
+    width: 170px;
+    border-radius: 5px;
+    border: none;
+    padding: 15px;
+    font-size: 15px;
+    background-color: #dad5d5;
+    transition: all 0.4s ease;
+}
 
 .rodape {
     position: fixed;

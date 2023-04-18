@@ -2,7 +2,7 @@
     require_once "../topo.php";
     if(!isset($_SESSION['usuarioLogado']) ||
         $_SESSION['usuarioLogado']==false){
-        echo "<p>Você não tem permissão para
+        echo "<p class='texto2'>Você não tem permissão para
          executar esta página</p>";
     } else {
         if ($_SESSION['tipoUsuario'] == 1) {
@@ -16,8 +16,8 @@
                     where idEsp=$var_id";
                     $query=$conexao->prepare($sql);
                     $query->execute();
-                    echo "<p>Excluído com sucesso!</p><br>";
-                    echo "<p>Volte para a <a href='listarespecialidades.php'>
+                    echo "<p class='texto2'>Excluído com sucesso!</p><br>";
+                    echo "<p class='texto2'>Volte para a<a class='link2' href='listarespecialidades.php'>
                         lista de especialidades</a></p>";
                 }
             catch (PDOException $i)
@@ -28,11 +28,11 @@
         }
         //fim do if
         else {
-            echo "<p>Não foi possível realizar a exclusão!<br> Por favor preencha o <a href='cadespecialidade.php'>
+            echo "<p class='texto2'>Não foi possível realizar a exclusão!<br> Por favor preencha o <a href='cadespecialidade.php'>
             formulário de cadastro</a> novamente.<br><br>Ou apenas retorne para 'Especialidades' na barra superior!</p>";
         }
     }else
-        echo "<p>Você não tem permissão 
+        echo "<p class='texto2'>Você não tem permissão 
         para executar esta ação.</p>";    
 }//fim do else da SESSION
     require_once "../rodape.php";

@@ -1,23 +1,25 @@
 <?php
     require_once "../topo.php";
 ?>
-    <a href="cadespecialidade.php">Novo</a><br>
-    <h2>Especialidades cadastrados</h2>
     <?php
     if(!isset($_SESSION['usuarioLogado']) ||
         $_SESSION['usuarioLogado']==false){
-        echo "<p>Você não tem permissão para
+        echo "<p class='texto2'>Você não tem permissão para
          executar esta página</p>";
     } else {
         if ($_SESSION['tipoUsuario'] == 1) {
+            
+            echo "<h2>Especialidades cadastradas</h2>";
+            echo "<a class='link2' href='cadespecialidade.php'>Novo</a><br><br>";
             require_once "../conexao.php";
             $sql = "SELECT * from especialidades";
             $resultado = $conexao->query($sql);
             $dados = $resultado->fetchAll(PDO::FETCH_ASSOC);
             foreach ($dados as $linha) { //pega cada registro do array para mostrar na tela
-                echo "<p>$linha[nomeEsp] -
-                <a href='editarespecialidade.php?idEsp=$linha[idEsp]'>Editar</a>
-                <a href='excluirespecialidades.php?idEsp=$linha[idEsp]'>Excluir</a></p>";
+                echo "<hr><br>
+                <p class='texto2'>$linha[nomeEsp] -
+                <a class='link2' href='editarespecialidade.php?idEsp=$linha[idEsp]'>Editar</a>
+                <a class='link2' href='excluirespecialidades.php?idEsp=$linha[idEsp]'>Excluir</a></p>";
             }
         }else if ($_SESSION['tipoUsuario'] == 2) {
             require_once "../conexao.php";
@@ -25,12 +27,12 @@
             $resultado = $conexao->query($sql);
             $dados = $resultado->fetchAll(PDO::FETCH_ASSOC);
             foreach ($dados as $linha) { //pega cada registro do array para mostrar na tela
-                echo "<p>id: $linha[idPlano] - 
+                echo "<p class='texto2'>id: $linha[idPlano] - 
                 $linha[nome] ( $linha[cnpj] ) - $linha[operadora]
-                <a href='editarplano.php?idPlano=$linha[idPlano]'>Editar</a>";
+                <a class='link2' href='editarplano.php?idPlano=$linha[idPlano]'>Editar</a>";
             } 
         } else {
-            echo "<p>Você não tem permissão 
+            echo "<p class='texto2'>Você não tem permissão 
             para executar esta ação.</p>";
         }
 
