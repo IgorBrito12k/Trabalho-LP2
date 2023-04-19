@@ -17,7 +17,7 @@
             $dados = $resultado->fetchAll(PDO::FETCH_ASSOC);
             foreach ($dados as $linha) { //pega cada registro do array para mostrar na tela
                 echo "<hr><br>
-                <p class='texto2'>$linha[nomeEsp] -
+                <p class='texto2'>$linha[nomeEsp] - idPessoa: $linha[idPessoa] -
                 <a class='link2' href='editarespecialidade.php?idEsp=$linha[idEsp]'>Editar</a>
                 <a class='link2' href='excluirespecialidades.php?idEsp=$linha[idEsp]'>Excluir</a></p>";
             }
@@ -27,7 +27,7 @@
             $resultado = $conexao->query($sql);
             $dados = $resultado->fetchAll(PDO::FETCH_ASSOC);
             foreach ($dados as $linha) { //pega cada registro do array para mostrar na tela
-                echo "<p class='texto2'>id: $linha[idPlano] - 
+                echo "<p class='texto2'>id: $linha[idPlano] - idPessoa: $linha[idPessoa] -
                 $linha[nome] ( $linha[cnpj] ) - $linha[operadora]
                 <a class='link2' href='editarplano.php?idPlano=$linha[idPlano]'>Editar</a>";
             } 

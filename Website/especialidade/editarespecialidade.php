@@ -23,6 +23,9 @@
                             <h2 id="titulo">Cadastro de especialidades</h2>
                             <form name="form1" action="atualizarespecialidade.php?idEsp=<?php echo $linha['idEsp']; ?>"
                             method="post">
+                                <label for="idPessoa">ID Pessoa</label>
+                                <input class="input" type="text" name="idPessoa" required
+                                value="<?php echo $linha['nome']; ?>"><br>
                                 <label for="nome">Nome</label>
                                 <input class="input" type="text" name="nomeEsp" required
                                 value="<?php echo $linha['nomeEsp']; ?>"><br>

@@ -23,15 +23,16 @@
                 executar esta página</p>";
         } else {
             if ($_SESSION['tipoUsuario'] == 1) {
-                if (isset($_POST['nome'])) {
+                if (isset($_POST['idPessoa']) && isset($_POST['nome'])) {
+                    $idPessoa = $_POST['idPessoa'];
                     $nome = $_POST['nome'];
                     require_once "../conexao.php";
                     try {
                         //vamos inserir na tabela
-                        $sql = "insert into especialidades (nomeEsp)
+                        $sql = "insert into especialidades (idPessoa, nomeEsp)
                         VALUES (?)";
                         $query = $conexao->prepare($sql);
-                        $query->execute([$nome]);
+                        $query->execute([$idPessoa, $nome]);
                         $rs = $conexao->lastInsertId()
                             or die(print_r($query->errorInfo(), true));
                         echo "<p class='texto2'>Salvo com sucesso!</p>";

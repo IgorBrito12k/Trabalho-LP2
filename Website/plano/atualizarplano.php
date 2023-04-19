@@ -17,7 +17,7 @@
                 try
                     {   
                         //vamos atualizar na tabela
-                        $sql="update planos set idPessoa='$idPessoa', nome='$nome',
+                        $sql="UPDATE planos set idPessoa='$idPessoa', nome='$nome',
                         cnpj='$cnpj', operadora='$operadora' 
                         where idPlano=$id";
                         $query=$conexao->prepare($sql);
@@ -33,8 +33,8 @@
                 }
             }//fim do if
             else {
-                echo "<p class='texto2'>Preencha o <a class='link2' href='cadplano.php'>
-                formulário</a></p>";
+                echo "<p class='texto2'>Não foi possível realizar a atualização!<br> Por favor preencha o <a class='link' href='cadplano.php'>
+                formulário de cadastro</a> novamente.<br><br>Ou apenas retorne para 'Plano' na barra superior!</p>";
             }
         }else
         echo "<p class='texto2'>Você não tem permissão 

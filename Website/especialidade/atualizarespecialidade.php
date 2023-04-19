@@ -7,14 +7,15 @@
     } else {
         if ($_SESSION['tipoUsuario'] == 1) {
             if(isset($_POST['nomeEsp'])){
-                $var_nome = $_POST['nomeEsp']; 
-                $var_id = $_GET['idEsp']; // Captura o valor do id da URL
+                $idPessoa = $_POST['idPessoa'];
+                $nome = $_POST['nomeEsp']; 
+                $id = $_GET['idEsp']; // Captura o valor do id da URL
                 require_once "../conexao.php";
                 try
                     {   
                         //vamos atualizar na tabela
-                        $sql="UPDATE especialidades set nomeEsp='$var_nome'
-                        WHERE idEsp='$var_id'";
+                        $sql="UPDATE especialidades set idPessoa='$idPessoa', nomeEsp='$nome'
+                        WHERE idEsp='$id'";
                         $query=$conexao->prepare($sql);
                         $query->execute();
                         echo "<p class='texto2'>Atualizado com sucesso!</p>";
