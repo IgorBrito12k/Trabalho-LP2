@@ -13,7 +13,7 @@
             <a class='link2' href='excluirespecialidades.php?idEsp=$linha[idEsp]'>Excluir</a></p>";
         }
     }else
-    echo "<p>Você não tem permissão 
+    echo "<p class='texto2'>Você não tem permissão 
     para executar esta ação.</p>";
     require_once "../rodape.php";
 ?>

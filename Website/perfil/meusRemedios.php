@@ -8,13 +8,13 @@
         $dados = $resultado->fetchAll(PDO::FETCH_ASSOC);
         foreach ($dados as $linha) {  //pega cada registro do array para mostrar na tela
             echo "<hr><br>
-            <p>id: $linha[idRemedio] - idPessoa: $linha[idPessoa] -
+            <p class='texto2'>id: $linha[idRemedio] - idPessoa: $linha[idPessoa] -
             $linha[nome] ( $linha[marca] ) - $linha[lugar]
-            <a href='editarremedios.php?idRemedio=$linha[idRemedio]'>Editar</a>
-            <a href='excluirremedios.php?idRemedio=$linha[idRemedio]'>Excluir</a></p>";
+            <a class='link2' href='editarremedios.php?idRemedio=$linha[idRemedio]'>Editar</a>
+            <a class='link2' href='excluirremedios.php?idRemedio=$linha[idRemedio]'>Excluir</a></p>";
         }
     }else
-    echo "<p>Você não tem permissão 
+    echo "<p class='texto2'>Você não tem permissão 
     para executar esta ação.</p>";
     require_once "../rodape.php";
 ?>

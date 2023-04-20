@@ -16,7 +16,7 @@
     catch (PDOException $i)
     {
         //se houver exceção, exibe
-        echo "<h2>Irmão Fodeo!! Chama o DBA URGÊNTE!!!</h2>";
+        echo "<h2>A casa caiu irmão!! Chama o DBA URGÊNTE!!!</h2>";
     }
 ?>
 
