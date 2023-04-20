@@ -28,13 +28,14 @@ require_once("topo.php");
             $tipo = filter_input(INPUT_POST, 'tipo');
             $senha = filter_input(INPUT_POST, 'senhaConfirmada');
 
-            echo "Nome: $nome <br>";
-            echo "data de nascimento: $nasc <br>";
-            echo "cpf: $cpf <br>";
-            echo "celular: $celular <br>";
-            echo "email: $email <br>";
-            echo "tipo: $tipo <br>";
-            echo "senha: $senha <br>";
+            echo "<h2>Meus dados cadastrados:</h2>";
+            echo "<p class='texto'>Nome: $nome </p>";
+            echo "<p class='texto'>Data de nascimento: $nasc </p>";
+            echo "<p class='texto'>Cpf: $cpf </p>";
+            echo "<p class='texto'>Celular: $celular </p>";
+            echo "<p class='texto'>Email: $email </p>";
+            echo "<p class='texto'>Tipo: $tipo </p>";
+            echo "<p class='texto'>Senha: $senha </p>";
 
             try {
                 $sql = "insert into pessoas (nome, nasc, cpf, celular, email, tipo, senha) 
@@ -43,9 +44,9 @@ require_once("topo.php");
                     $query->execute([$nome, $nasc, $cpf, $celular, $email, $tipo, $senha]);
                     $rs = $conexao->lastInsertId()
                         or die(print_r($query->errorInfo(), true));
-                    echo "<p>Salvo com sucesso!</p><br><br>";
-                    echo "<p>Ja com os dados cadastrado você pode clicar em login e acessar sua conta!</p><br><br>";
-                    echo "<a href='login.php'>Login</a>";
+                    echo "<p class='texto'>Salvo com sucesso!</p><br><br>";
+                    echo "<p class='texto'>Ja com os dados cadastrado você pode clicar em login e acessar sua conta!</p><br><br>";
+                    echo "<a class='link'href='login.php'>Login</a>";
                 } catch (PDOException $i) {
                     //se houver exceção, exibe
                     die("Erro: <code>" . $i->getMessage() . "</code>");

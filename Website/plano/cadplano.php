@@ -1,6 +1,6 @@
 <?php
 require_once "../topo.php";
-if ($_SESSION['tipoUsuario'] == 1) {
+if (isset($_SESSION['tipoUsuario']) && $_SESSION['tipoUsuario'] == 1) {
 ?>
 <div class="container">
     <h2 id="titulo">Cadastro de Planos</h2>

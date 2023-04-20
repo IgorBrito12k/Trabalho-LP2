@@ -17,6 +17,7 @@ require_once("../topo.php");
 <body>
     <div class="container">
         <?php
+        if(isset($_SESSION['nomeUsuario'])){
             echo "<br><h2>Bem vindo a especialidades, para onde vc gostaria de ir:</h2><br>";
             echo "<p class='texto2'>Cadastrar uma especialidade:</p><br>
             <a class='link2' href='cadespecialidade.php'>Cadastrar</a><br><br>";
@@ -26,6 +27,10 @@ require_once("../topo.php");
             <a class='link2' href='listarespecialidades.php'>Excluir</a><br><br>";
             echo "<p class='texto2'>Listar as especialidade:</p><br>
             <a class='link2' href='listarespecialidades.php'>Listar</a><br>";
+        } else {
+            echo "<h2>Você precisa estar logado para acessar esta função.</h2><br><br>";
+            echo " <a class='link' href='../login.php'>Login</a>"; 
+        }
         ?>
     </div>
 </body>

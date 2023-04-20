@@ -17,15 +17,20 @@ require_once("../topo.php");
 <body>
     <div class="container">
         <?php
-            echo "<br><h2>Bem vindo a planos, para onde vc gostaria de ir:</h2><br><br>";
-            echo "<p class='texto2'>Cadastrar uma plano:</p><br>
-            <a class='link2' href='cadplano.php'>Cadastrar</a><br><br>";
-            echo "<p class='texto2'>Editar um plano:</p><br>
-            <a class='link2' href='listarplano.php'>Editar</a><br><br>";
-            echo "<p class='texto2'>Excluir um plano:</p><br>
-            <a class='link2' href='listarplano.php'>Excluir</a><br><br>";
-            echo "<p class='texto2'>Listar os planos:</p><br>
-            <a class='link2' href='listarplano.php'>Listar</a><br>";
+            if(isset($_SESSION['nomeUsuario'])){ 
+                echo "<br><h2>Bem vindo a planos, para onde vc gostaria de ir:</h2><br><br>";
+                echo "<p class='texto2'>Cadastrar uma plano:</p><br>
+                <a class='link2' href='cadplano.php'>Cadastrar</a><br><br>";
+                echo "<p class='texto2'>Editar um plano:</p><br>
+                <a class='link2' href='listarplano.php'>Editar</a><br><br>";
+                echo "<p class='texto2'>Excluir um plano:</p><br>
+                <a class='link2' href='listarplano.php'>Excluir</a><br><br>";
+                echo "<p class='texto2'>Listar os planos:</p><br>
+                <a class='link2' href='listarplano.php'>Listar</a><br>";
+            } else {
+                echo "<h2>Você precisa estar logado para acessar esta função.</h2><br><br>";
+                echo " <a class='link' href='../login.php'>Login</a>"; 
+            }
         ?>
     </div>
 </body>

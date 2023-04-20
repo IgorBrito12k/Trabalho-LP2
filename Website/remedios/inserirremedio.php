@@ -29,7 +29,8 @@
                 echo "<a class='link2'  href='listarremedios.php'>Lista de remédios</a>";
             } catch (PDOException $i) {
                 //se houver exceção, exibe
-                die("Erro: <code>" . $i->getMessage() . "</code>");
+                echo "<h2> Ocorreu um erro ao tentar acessar o banco de dados</h2>";
+                echo "<p class='texto'>Verifique os dados e tente novamente!</p>";
             }
         } //fim do if
         else {

@@ -29,15 +29,15 @@ require_once("topo.php");
             $resultado = $conexao->query($sql);
             $dados = $resultado->fetchAll(PDO::FETCH_ASSOC);
 
+            // se encontrou o registro, não exibe mensagem de erro
+            $encontrouRegistro = true;
+
             foreach ($dados as $linha) {
                 //se existir, define as variáveis de sessão e redireciona para a dashboard
                 $_SESSION['usuarioLogado'] = true;
                 $_SESSION['idUsuario'] = $linha['id'];
                 $_SESSION['nomeUsuario'] = $linha['nome'];
                 $_SESSION['tipoUsuario'] = $linha['tipo'];
-
-                // se encontrou o registro, não exibe mensagem de erro
-                $encontrouRegistro = true;
 
                 echo "<h2>Login validado</h2><br>";
                 echo "<p class='texto'>Siga para a sua dashboard clicando em no
@@ -47,7 +47,7 @@ require_once("topo.php");
 
             if (!$encontrouRegistro) {
                 // se não existir, exibe mensagem de erro
-                echo "E-mail ou senha inválidos.";
+                echo "<p class='texto'>E-mail ou senha inválidos.</p>";
             }
         }
     ?>
