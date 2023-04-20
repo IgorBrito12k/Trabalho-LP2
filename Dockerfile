@@ -14,5 +14,5 @@ RUN apt-get update && apt-get install -y \
     libmariadb-dev \
     && docker-php-ext-install mysqli pdo_mysql
 
-# Habilita a extensão mysqli
+# Habilita a extensão mysqli.
 RUN docker-php-ext-enable mysqli

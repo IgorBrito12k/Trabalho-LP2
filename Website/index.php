@@ -9,8 +9,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>Bem vindo ao hospital</h1>
-        <p>Entre ou cadastre-se em nosso sistema hospitalar</p>
+        <h1>Bem vindo ao hospital!</h1>
+        <p>Entre ou cadastre-se em nosso sistema hospitalar!</p>
         <div class="container-links">
             <h2>Para onde você gostaria de ir?</h2>
             <a href="login.php">

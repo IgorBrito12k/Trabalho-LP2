@@ -16,7 +16,7 @@
     catch (PDOException $i)
     {
         //se houver exceção, exibe
-        die("Erro de conexão: <code>" . $i->getMessage() . "</code>");
+        echo "<h2>Irmão Fodeo!! Chama o DBA URGÊNTE!!!</h2>";
     }
 ?>
 
