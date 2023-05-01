@@ -30,7 +30,7 @@
                     try {
                         //vamos inserir na tabela
                         $sql = "insert into especialidades (idPessoa, nomeEsp)
-                        VALUES (?)";
+                        VALUES (?, ?)";
                         $query = $conexao->prepare($sql);
                         $query->execute([$idPessoa, $nome]);
                         $rs = $conexao->lastInsertId()
